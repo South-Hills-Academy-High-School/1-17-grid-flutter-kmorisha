@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:provider/provider.dart';
@@ -7,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-const Myapp({super.key});
+const MyApp({super.key});
 
 @override
 Widget build(BuildContext context) {
@@ -18,13 +20,22 @@ Widget build(BuildContext context) {
       theme: ThemeData(),
       home: MyHomePage(),
     ),
-  
-
-
   );
+}
+}
+
+class MyAppState extends ChangeNotifier {}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Text('Hello!'),
+    );
+  }
 
 }
-}
+
 
 
 
